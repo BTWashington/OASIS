@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">OASIS_DB</string>
+    <string name="UserName_Prof_Search">UserName</string>
+    <string name="ProfileNumber_Prof_Search">Profile Number</string>
+    <string name="sw_activeProfile">Active Profile</string>
+    <string name="btn_ViewAll">View All</string>
+    <string name="btn_add">Create Profile</string>
+    <string name="phone_Number">Phone Number</string>
+</resources>

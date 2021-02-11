@@ -27,6 +27,7 @@ public class DataBaseAssistant extends SQLiteOpenHelper {
 	 * {@link #getReadableDatabase} is called.
 	 *
 	 * @param context to use for locating paths to the the database
+	 *            C:\Users\Brand\Full Sail\Project OASIS\Database
 	 */
 	public DataBaseAssistant(@Nullable Context context) {
 		super(context,"Profile_DB", null, 1);

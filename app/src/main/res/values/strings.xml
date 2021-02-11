@@ -6,4 +6,5 @@
     <string name="btn_ViewAll">View All</string>
     <string name="btn_add">Create Profile</string>
     <string name="phone_Number">Phone Number</string>
+    <string name="UserName_Profile_Screen">UserName Profile Screen</string>
 </resources>

@@ -22,4 +22,5 @@
     <string name="cb_has_insurance">Has Insurance</string>
     <string name="cb_has_Warranty">Has a Warranty</string>
     <string name="cb_has_roadside_assist">Roadside Assistance</string>
+    <string name="cb_has_claims">Has Claims</string>
 </resources>

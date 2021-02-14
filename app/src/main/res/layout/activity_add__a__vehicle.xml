@@ -48,7 +48,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox4"
+        app:layout_constraintTop_toBottomOf="@+id/cb_has_claims"
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
@@ -77,9 +77,13 @@
         android:id="@+id/tv_odometer"
         android:layout_width="136dp"
         android:layout_height="34dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         android:text="@string/tv_odometer1"
-        tools:layout_editor_absoluteX="579dp"
-        tools:layout_editor_absoluteY="101dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_vin_number"
+        app:layout_constraintBottom_toTopOf="@id/recyclerView"
+        />
 
     <CheckBox
         android:id="@+id/cb_has_insurance"
@@ -96,8 +100,9 @@
         android:layout_width="110dp"
         android:layout_height="25dp"
         android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
         android:text="@string/cb_has_Warranty"
-        app:layout_constraintBaseline_toBaselineOf="@+id/checkBox4"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerView"
         app:layout_constraintStart_toStartOf="parent" />
 
     <CheckBox
@@ -111,13 +116,16 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_year_of_vehicle" />
 
     <CheckBox
-        android:id="@+id/checkBox4"
-        android:layout_width="110dp"
-        android:layout_height="26dp"
+        android:id="@+id/cb_has_claims"
+        android:layout_width="137dp"
+        android:layout_height="24dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="CheckBox"
+        android:hint="@string/cb_has_claims"
+        android:text="@string/cb_has_claims"
         app:layout_constraintStart_toEndOf="@+id/cb_has_Warranty"
-        app:layout_constraintTop_toBottomOf="@+id/cb_has_insurance" />
+        app:layout_constraintTop_toBottomOf="@+id/cb_has_insurance"
+        app:layout_constraintBottom_toTopOf="@id/recyclerView"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

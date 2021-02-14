@@ -7,4 +7,19 @@
     <string name="btn_add">Create Profile</string>
     <string name="phone_Number">Phone Number</string>
     <string name="UserName_Profile_Screen">UserName Profile Screen</string>
+    <string name="tv_USER_first_name">First Name</string>
+    <string name="tv_USER_last_name">Last Name</string>
+    <string name="tv_USER_profileNumber">Profile Number</string>
+    <string name="tv_street_address">Street Address</string>
+    <string name="tv_city">City</string>
+    <string name="tv_name_of_dealership">Name of Dealership</string>
+    <string name="tv_year_of_vehicle">Year of Vehicle</string>
+    <string name="tv_make_of_vehicle">Make of Vehicle</string>
+    <string name="tv_model_of_vehicle">Model of Vehicle</string>
+    <string name="tv_vin_number">VIN Number</string>
+    <string name="tv_odometer">odometer</string>
+    <string name="tv_odometer1">Odometer</string>
+    <string name="cb_has_insurance">Has Insurance</string>
+    <string name="cb_has_Warranty">Has a Warranty</string>
+    <string name="cb_has_roadside_assist">Roadside Assistance</string>
 </resources>

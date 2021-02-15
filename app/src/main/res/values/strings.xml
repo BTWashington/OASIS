@@ -23,4 +23,7 @@
     <string name="cb_has_Warranty">Has a Warranty</string>
     <string name="cb_has_roadside_assist">Roadside Assistance</string>
     <string name="cb_has_claims">Has Claims</string>
+    <string name="tv_title_loginScreen">OASIS</string>
+    <string name="hintForLoginPassword">Enter password</string>
+    <string name="btn_Login">Login</string>
 </resources>

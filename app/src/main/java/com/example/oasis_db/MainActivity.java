@@ -21,7 +21,8 @@ public class MainActivity extends AppCompatActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-
+		
+		// Customer Profile Database
 		btn_add = findViewById(R.id.btn_add);
 		btn_viewAll = findViewById(R.id.btn_viewAll);
 		et_PhoneNumber = findViewById(R.id.et_PhoneNumber);

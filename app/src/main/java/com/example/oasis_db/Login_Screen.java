@@ -21,7 +21,7 @@ public class Login_Screen extends AppCompatActivity {
 	// The user will only be able to enter the app if they enter the
 	// correct credentials
 
-	private String UserName = "ADMIN";
+	private String UserName = "Admin";
 	private String Password = "123456789";
 
 
@@ -59,7 +59,15 @@ public class Login_Screen extends AppCompatActivity {
 	// Method to validate user input on the Username and Password
 	private boolean ValidateUserInput(String name, String password){
 
-		return true;
+		if(name.equals(UserName)&& password.equals(Password)){
+
+			return true;
+		}
+
+
+
+
+		return false;
 	}
 
 

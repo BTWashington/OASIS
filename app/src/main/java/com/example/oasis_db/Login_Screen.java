@@ -55,4 +55,13 @@ public class Login_Screen extends AppCompatActivity {
 		});
 
 	}
+
+	// Method to validate user input on the Username and Password
+	private boolean ValidateUserInput(String name, String password){
+
+		return true;
+	}
+
+
+
 }

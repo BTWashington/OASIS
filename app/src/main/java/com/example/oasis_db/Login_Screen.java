@@ -3,9 +3,13 @@ package com.example.oasis_db;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.os.UserHandle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Login_Screen extends AppCompatActivity {
 
@@ -13,6 +17,12 @@ public class Login_Screen extends AppCompatActivity {
 	private EditText et_password;
 	private Button btn_login;
 	private TextView tv_attemptsInfo;
+
+	// The user will only be able to enter the app if they enter the
+	// correct credentials
+
+	private String UserName = "ADMIN";
+	private String Password = "123456789";
 
 
 	@Override
@@ -27,7 +37,22 @@ public class Login_Screen extends AppCompatActivity {
 		tv_attemptsInfo = findViewById(R.id.tv_attemptsInfo);
 
 		// Create the listener for the button click on the login screen
+		btn_login.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
 
+				// Get the Username that the user entered
+				String UserInputName = et_Username.getText().toString();
+				String UserInputPassword = et_password.getText().toString();
+
+				// Checking to see if the User input a value
+				if(UserInputName.isEmpty() || UserInputPassword.isEmpty()) {
+					Toast.makeText(Login_Screen.this, "Please enter both a Username and a password", Toast.LENGTH_SHORT).show();
+				}
+
+
+			}
+		});
 
 	}
 }

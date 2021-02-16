@@ -22,7 +22,7 @@ public class Login_Screen extends AppCompatActivity {
 	// correct credentials
 
 	private String UserName = "Admin";
-	private String Password = "123456789";
+	private String Password = "";
 
 
 	@Override

@@ -13,6 +13,7 @@ public class Profile_PI {
 	private int age;
 	private long phone;
 	private String email;
+	private String password;
 	private boolean hasVehicle;
 	private boolean hasInsurance;
 	private boolean hasWarranty;
@@ -26,7 +27,7 @@ public class Profile_PI {
 
 	// -->> Fully Parameterized Constructor
 	public Profile_PI(int id, String first_name, String last_name, String address, String address_mailing,
-					  String city, String state, int zipCode, int dateOfBirth, int age, long phone, String email,
+					  String city, String state, int zipCode, int dateOfBirth, int age, long phone, String email, String password,
 					  boolean hasVehicle, boolean hasInsurance, boolean hasWarranty, String acsLvl, boolean isActive) {
 		this.id = id;
 		this.first_name = first_name;
@@ -40,6 +41,7 @@ public class Profile_PI {
 		this.age = age;
 		this.phone = phone;
 		this.email = email;
+		this.password = password;
 		this.hasVehicle = hasVehicle;
 		this.hasInsurance = hasInsurance;
 		this.hasWarranty = hasWarranty;
@@ -65,6 +67,7 @@ public class Profile_PI {
 				", age=" + age +
 				", phone=" + phone +
 				", email='" + email + '\'' +
+				", password='" + password + '\'' +
 				", hasVehicle=" + hasVehicle +
 				", hasInsurance=" + hasInsurance +
 				", hasWarranty=" + hasWarranty +
@@ -170,6 +173,14 @@ public class Profile_PI {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+
+	public String getPassword(){
+		return password;
+	}
+
+	public void setPassword(String password){
+		this.password = password;
 	}
 
 	public boolean isHasVehicle() {

@@ -3,8 +3,15 @@ package com.example.oasis_db;
 import java.util.Random;
 
 public class Profile_Key {
-	private Integer profile_key;
-	private String profile_id;
+
+
+	// Contstants for Catch and Throw Calls
+	public static final String Method_Failed = "Something went wrong converting user input, please try again...";
+	public static final String USER_INPUT_INCORRECT = "User Input was incorrect, please try again...";
+
+
+	private Integer profile_key = 0;
+	private String profile_id = "";
 
 	// Constructor for the Profile_Key
 	Profile_Key(Integer key,String id){
@@ -23,25 +30,32 @@ public class Profile_Key {
 	public static String Create_Password_Key(Integer User_key){
 		// Generate the Random Number used for Creating individual profile_key
 		// rooted from the User defined Key
-		Random rndNum = new Random(User_key);
+		try{
+			if(User_key >= 1) {
+				Random rndNum = new Random(User_key);
+				return rndNum.toString();
+			}else{
+				System.out.print(USER_INPUT_INCORRECT);
+			}
+		}catch(Exception e){
+			System.out.print(Method_Failed);
+		}
+
 		// Return the rndNum to String format and return value to Caller
-		return rndNum.toString();
+		return Method_Failed;
 	}
-
-
-
 
 	/**
 	 *
 	 *
 	 * */
 	// Method to use the Password_Key to convert User Defined Key to User_Password
-	public static int Convert_To_Profile_Key(String rndKey, int profile_key){
+	public static int Convert_To_Profile_Key(String rndNum, Integer profile_key){
 		// Convert rndKey to a Integer
-		int intrndkey = Integer.parseInt(rndKey);
+		Integer rndkey = Integer.parseInt(rndNum);
 
 		// XOR the profile key with the rndKey generated in Create_Password_Key Method
-		profile_key ^= intrndkey;
+		profile_key ^= rndkey;
 
 		return profile_key;
 

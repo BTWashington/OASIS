@@ -1,7 +1,7 @@
 package com.example.oasis_db;
 
 public class Profile_PI {
-	private int id;
+	private String id;
 	private String first_name;
 	private String last_name;
 	private String address;
@@ -9,6 +9,7 @@ public class Profile_PI {
 	private String city;
 	private String state;
 	private int zipCode;
+	private String image;
 	private int DateOfBirth;
 	private int age;
 	private long phone;
@@ -26,8 +27,8 @@ public class Profile_PI {
 	public Profile_PI(){}
 
 	// -->> Fully Parameterized Constructor
-	public Profile_PI(int id, String first_name, String last_name, String address, String address_mailing,
-					  String city, String state, int zipCode, int dateOfBirth, int age, long phone, String email, String password,
+	public Profile_PI(String id, String first_name, String last_name, String address, String address_mailing,
+					  String city, String state, int zipCode, String image, int dateOfBirth, int age, long phone, String email, String password,
 					  boolean hasVehicle, boolean hasInsurance, boolean hasWarranty, String acsLvl, boolean isActive) {
 		this.id = id;
 		this.first_name = first_name;
@@ -37,7 +38,8 @@ public class Profile_PI {
 		this.city = city;
 		this.state = state;
 		this.zipCode = zipCode;
-		DateOfBirth = dateOfBirth;
+		this.image = image;
+		this.DateOfBirth = dateOfBirth;
 		this.age = age;
 		this.phone = phone;
 		this.email = email;
@@ -79,11 +81,11 @@ public class Profile_PI {
 
 	// Getters and Setters
 
-	public int getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 
@@ -142,6 +144,10 @@ public class Profile_PI {
 	public void setZipCode(int zipCode) {
 		this.zipCode = zipCode;
 	}
+
+	public String getImage(){return image;}
+
+	public void setImage(String image){this.image = image;}
 
 	public int getDateOfBirth() {
 		return DateOfBirth;

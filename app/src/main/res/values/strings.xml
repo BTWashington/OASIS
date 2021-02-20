@@ -26,4 +26,22 @@
     <string name="tv_title_loginScreen">OASIS</string>
     <string name="hintForLoginPassword">Enter password</string>
     <string name="btn_Login">Login</string>
+    <string name="et_profile_first_name">First Name</string>
+    <string name="et_profile_last_name">Last Name</string>
+    <string name="et_street_address">Street Address</string>
+    <string name="et_garaging_address">Garaging Address</string>
+    <string name="et_mailing_address">Mailing Address</string>
+    <string name="et_profile_city">City</string>
+    <string name="et_profile_state">State</string>
+    <string name="etn_profile_zipCode">Zip Code</string>
+    <string name="et_profile_phone">Phone</string>
+    <string name="et_profile_email">Email</string>
+    <string name="et_Territory">Territory</string>
+    <string name="sw_has_Vehicle">Has A Vehicle</string>
+    <string name="sw_has_insurance">Vehicle Has Insurance</string>
+    <string name="sw_has_insurance2">Veh has Ins</string>
+    <string name="sw_has_warranty">Veh has Warranty</string>
+    <string name="sw_has_insurance3">Veh has Insurance</string>
+    <string name="sw_has_claims">Veh has Claims</string>
+    <string name="et_profile_password">Profile Password</string>
 </resources>

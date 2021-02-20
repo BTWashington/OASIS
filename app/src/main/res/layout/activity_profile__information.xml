@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Profile_Information">
+
+    <EditText
+        android:id="@+id/et_profile_password2"
+        android:layout_width="173dp"
+        android:layout_height="35dp"
+        android:ems="10"
+        android:hint="@string/et_profile_password"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/etn_profile_zipCode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toEndOf="@+id/et_garaging_address"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.866" />
+
+    <Switch
+        android:id="@+id/sw_has_claims"
+        android:layout_width="130dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/sw_has_claims"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.016"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sw_has_warranty"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="@string/sw_has_claims" />
+
+    <Switch
+        android:id="@+id/sw_has_warranty"
+        android:layout_width="130dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/sw_has_warranty"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.016"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sw_has_insurance"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="@string/sw_has_warranty" />
+
+    <Switch
+        android:id="@+id/sw_has_insurance"
+        android:layout_width="129dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/sw_has_insurance3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.016"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sw_has_Vehicle"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="@string/sw_has_insurance3" />
+
+    <EditText
+        android:id="@+id/et_profile_city"
+        android:layout_width="147dp"
+        android:layout_height="34dp"
+        android:editable="true"
+        android:ems="10"
+        android:hint="@string/et_profile_city"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.043"
+        app:layout_constraintStart_toEndOf="@+id/et_profile_ID_number"
+        app:layout_constraintTop_toBottomOf="@+id/et_garaging_address2"
+        app:layout_constraintVertical_bias="0.027" />
+
+    <EditText
+        android:id="@+id/et_garaging_address2"
+        android:layout_width="251dp"
+        android:layout_height="34dp"
+        android:layout_marginBottom="164dp"
+        android:editable="true"
+        android:ems="10"
+        android:hint="@string/et_garaging_address"
+        android:inputType="textPersonName|textPostalAddress"
+        android:text="Name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.066"
+        app:layout_constraintStart_toEndOf="@+id/et_profile_last_name"
+        app:layout_constraintTop_toBottomOf="@+id/et_garaging_address"
+        app:layout_constraintVertical_bias="0.047" />
+
+    <EditText
+        android:id="@+id/et_garaging_address"
+        android:layout_width="251dp"
+        android:layout_height="34dp"
+        android:editable="true"
+        android:ems="10"
+        android:hint="@string/et_garaging_address"
+        android:inputType="textPersonName|textPostalAddress"
+        android:text="Name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.07"
+        app:layout_constraintStart_toEndOf="@+id/et_profile_first_name"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.026" />
+
+    <EditText
+        android:id="@+id/et_profile_ID_number"
+        android:layout_width="147dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.042"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/et_profile_last_name"
+        app:layout_constraintVertical_bias="0.003" />
+
+    <EditText
+        android:id="@+id/et_profile_last_name"
+        android:layout_width="147dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="8dp"
+        android:editable="true"
+        android:ems="10"
+        android:hint="@string/et_profile_last_name"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.042"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/et_profile_first_name"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/et_profile_first_name"
+        android:layout_width="147dp"
+        android:layout_height="34dp"
+        android:editable="true"
+        android:ems="10"
+        android:hint="@string/et_profile_first_name"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.042"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.026" />
+
+    <EditText
+        android:id="@+id/et_profile_state"
+        android:layout_width="95dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="8dp"
+        android:editable="true"
+        android:ems="10"
+        android:hint="@string/et_profile_state"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/et_profile_city"
+        app:layout_constraintTop_toBottomOf="@+id/et_garaging_address2"
+        app:layout_constraintVertical_bias="0.03" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.016"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.033"
+        app:srcCompat="@drawable/ic_launcher_foreground" />
+
+    <EditText
+        android:id="@+id/et_profile_phone"
+        android:layout_width="179dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/et_profile_phone"
+        android:inputType="phone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_profile_ID_number"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/et_profile_email"
+        android:layout_width="265dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/et_profile_email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/et_profile_phone"
+        app:layout_constraintTop_toBottomOf="@+id/et_profile_city"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/etn_profile_zipCode"
+        android:layout_width="173dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/etn_profile_zipCode"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/et_profile_state"
+        app:layout_constraintTop_toBottomOf="@+id/et_garaging_address2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/et_Territory"
+        android:layout_width="128dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/et_Territory"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/et_profile_email"
+        app:layout_constraintTop_toBottomOf="@+id/etn_profile_zipCode"
+        app:layout_constraintVertical_bias="0.004" />
+
+    <Switch
+        android:id="@+id/sw_has_Vehicle"
+        android:layout_width="129dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/sw_has_Vehicle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.017"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_profile_phone"
+        app:layout_constraintVertical_bias="0.004" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_add_profile_details"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/sw_has_Vehicle"
+        app:layout_constraintTop_toBottomOf="@+id/et_profile_email" />
+
+    <EditText
+        android:id="@+id/et_profile_password"
+        android:layout_width="173dp"
+        android:layout_height="34dp"
+        android:ems="10"
+        android:hint="@string/et_profile_password"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/etn_profile_zipCode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toEndOf="@+id/et_garaging_address"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.166" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

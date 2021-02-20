@@ -49,23 +49,16 @@ public class Login_Screen extends AppCompatActivity {
 				if(UserInputName.isEmpty() || UserInputPassword.isEmpty()) {
 					Toast.makeText(Login_Screen.this, "Please enter both a Username and a password", Toast.LENGTH_SHORT).show();
 				}
-
-
 			}
 		});
-
 	}
 
 	// Method to validate user input on the Username and Password
 	private boolean ValidateUserInput(String name, String password){
 
-		if(name.equals(UserName)&& password.equals(Password)){
-
+		if(name.equals(UserName) && password.equals(Password)){
 			return true;
 		}
-
-
-
 
 		return false;
 	}

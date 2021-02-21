@@ -1,5 +1,8 @@
 package com.example.oasis_db;
 
+
+
+
 public class Profile_PI {
 	private String id;
 	private String first_name;
@@ -15,6 +18,7 @@ public class Profile_PI {
 	private long phone;
 	private String email;
 	private String password;
+	private Profile_Key pw_key;
 	private boolean hasVehicle;
 	private boolean hasInsurance;
 	private boolean hasWarranty;
@@ -26,10 +30,30 @@ public class Profile_PI {
 	// -->> Default Constructor
 	public Profile_PI(){}
 
+	// -->> Login Create Profile Button Constructor
+
+	public Profile_PI(String id, String first_name, String last_name, String address, String address_mailing, String city, String state, int zipCode,
+					  String image, int dateOfBirth, long phone, String email, String password) {
+		this.id = id;
+		this.first_name = first_name;
+		this.last_name = last_name;
+		this.address = address;
+		this.address_mailing = address_mailing;
+		this.city = city;
+		this.state = state;
+		this.zipCode = zipCode;
+		this.image = image;
+		DateOfBirth = dateOfBirth;
+		this.phone = phone;
+		this.email = email;
+		this.password = password;
+
+	}
+
 	// -->> Fully Parameterized Constructor
 	public Profile_PI(String id, String first_name, String last_name, String address, String address_mailing,
 					  String city, String state, int zipCode, String image, int dateOfBirth, int age, long phone, String email, String password,
-					  boolean hasVehicle, boolean hasInsurance, boolean hasWarranty, String acsLvl, boolean isActive) {
+					  Profile_Key pw_key, boolean hasVehicle, boolean hasInsurance, boolean hasWarranty, String acsLvl, boolean isActive) {
 		this.id = id;
 		this.first_name = first_name;
 		this.last_name = last_name;
@@ -44,6 +68,7 @@ public class Profile_PI {
 		this.phone = phone;
 		this.email = email;
 		this.password = password;
+		this.pw_key = pw_key;
 		this.hasVehicle = hasVehicle;
 		this.hasInsurance = hasInsurance;
 		this.hasWarranty = hasWarranty;
@@ -188,6 +213,10 @@ public class Profile_PI {
 	public void setPassword(String password){
 		this.password = password;
 	}
+
+	public Profile_Key getPw_key() { return pw_key; }
+
+	public void setPw_key(Profile_Key pw_key) {	this.pw_key = pw_key; }
 
 	public boolean isHasVehicle() {
 		return hasVehicle;

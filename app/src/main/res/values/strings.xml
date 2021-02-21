@@ -44,4 +44,7 @@
     <string name="sw_has_insurance3">Veh has Insurance</string>
     <string name="sw_has_claims">Veh has Claims</string>
     <string name="et_profile_password">Profile Password</string>
+    <string name="btn_back_button">Back</string>
+    <string name="btn_vehicle_info">Vehicle</string>
+    <string name="et_dateOfBirth">Date of Birth</string>
 </resources>

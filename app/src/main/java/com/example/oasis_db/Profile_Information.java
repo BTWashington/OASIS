@@ -17,7 +17,8 @@ public class Profile_Information extends AppCompatActivity {
 	ImageView profile_image;
 	EditText et_profile_first_name, et_profile_last_name, et_profile_ID_number, et_garaging_address, et_garaging_address2, et_profile_city, et_profile_state, etn_profile_zipCode;
 	EditText et_profile_phone, et_profile_email, et_Territory, et_profile_password, et_profile_dateOfBirth;
-	Switch
+	Switch sw_has_Vehicle, sw_has_insurance, sw_has_warranty, sw_has_claims;
+	Button btn_back_button,btn_vehicle_info,btn_quote_pool,btn_Home_page, btn_save_profile;
 
 
 	Button btn_add, btn_viewAll;
@@ -29,6 +30,32 @@ public class Profile_Information extends AppCompatActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_profile__information);
+
+		// Profile Information Database using findViewById to make connection from User
+		// Interface
+		profile_image = findViewById(R.id.iv_profile_picture);
+		et_profile_first_name = findViewById(R.id.et_profile_first_name);
+		et_profile_last_name = findViewById(R.id.et_profile_last_name);
+		et_profile_ID_number = findViewById(R.id.et_profile_ID_number);
+		et_garaging_address = findViewById(R.id.et_garaging_address);
+		et_garaging_address2 = findViewById(R.id.et_garaging_address2);
+		et_profile_city = findViewById(R.id.et_profile_city);
+		et_profile_state = findViewById(R.id.et_profile_state);
+		etn_profile_zipCode = findViewById(R.id.etn_profile_zipCode);
+
+		// Switches for profile information screen - Boolean Values
+		sw_has_Vehicle = findViewById(R.id.sw_has_Vehicle);
+		sw_has_insurance = findViewById(R.id.sw_has_insurance);
+		sw_has_warranty = findViewById(R.id.sw_has_warranty);
+		sw_has_claims = findViewById(R.id.sw_has_claims);
+
+		// Buttons for navigation from profile information screen
+		btn_Home_page = findViewById(R.id.btn_Home_page);
+		btn_back_button = findViewById(R.id.btn_back_button);
+		btn_vehicle_info = findViewById(R.id.btn_vehicle_info);
+		btn_quote_pool = findViewById(R.id.btn_quote_pool);
+		btn_save_profile = findViewById(R.id.btn_save_profile);
+//__________________________________________________________________________________________
 
 		// Customer Profile Database
 		btn_add = findViewById(R.id.btn_add);
@@ -48,6 +75,20 @@ public class Profile_Information extends AppCompatActivity {
 		 *			Database Assistant writes the profile to the database
 		 *
 		 *  */
+
+		btn_save_profile.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				// Instance of a Profile_PI object
+				Profile_PI pi_profile;
+
+				// try / catch block
+
+
+
+
+			}
+		});
 
 		btn_add.setOnClickListener(new View.OnClickListener() {
 			@Override

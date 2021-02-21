@@ -48,4 +48,7 @@
     <string name="btn_vehicle_info">Vehicle</string>
     <string name="et_dateOfBirth">Date of Birth</string>
     <string name="et_profile_dateOfBirth">Date of Birth</string>
+    <string name="et_profile_ID_number">Profile Number</string>
+    <string name="btn_save_profile">Save Profile</string>
+    <string name="btn_save_profile1">Save to Profile</string>
 </resources>

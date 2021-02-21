@@ -83,7 +83,8 @@ public class Profile_Information extends AppCompatActivity {
 				Profile_PI pi_profile;
 
 				// try / catch block
-
+				pi_profile = new Profile_PI( "-1","","","","","","",0,
+						"",0,0,"","");
 
 
 

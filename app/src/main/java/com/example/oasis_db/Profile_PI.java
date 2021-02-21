@@ -4,6 +4,8 @@ package com.example.oasis_db;
 
 
 public class Profile_PI {
+	public static final String ERROR = "Error";
+
 	private String id;
 	private String first_name;
 	private String last_name;
@@ -22,6 +24,7 @@ public class Profile_PI {
 	private boolean hasVehicle;
 	private boolean hasInsurance;
 	private boolean hasWarranty;
+	private boolean hasClaims;
 	private String acsLvl;
 	private boolean isActive;
 
@@ -30,7 +33,7 @@ public class Profile_PI {
 	// -->> Default Constructor
 	public Profile_PI(){}
 
-	// -->> Login Create Profile Button Constructor
+	// -->> Create Profile Constructor -> PI info only
 
 	public Profile_PI(String id, String first_name, String last_name, String address, String address_mailing, String city, String state, int zipCode,
 					  String image, int dateOfBirth, long phone, String email, String password) {
@@ -50,10 +53,35 @@ public class Profile_PI {
 
 	}
 
+	// -->> Profile Creation Constructor
+
+	public Profile_PI(String id, String first_name, String last_name, String address, String address_mailing, String city, String state, int zipCode,
+					  String image, int dateOfBirth, long phone, String email, String password, boolean hasVehicle, boolean hasInsurance,
+					  boolean hasWarranty, boolean hasClaims, boolean isActive) {
+		this.id = id;
+		this.first_name = first_name;
+		this.last_name = last_name;
+		this.address = address;
+		this.address_mailing = address_mailing;
+		this.city = city;
+		this.state = state;
+		this.zipCode = zipCode;
+		this.image = image;
+		DateOfBirth = dateOfBirth;
+		this.phone = phone;
+		this.email = email;
+		this.password = password;
+		this.hasVehicle = hasVehicle;
+		this.hasInsurance = hasInsurance;
+		this.hasWarranty = hasWarranty;
+		this.hasClaims = hasClaims;
+		this.isActive = isActive;
+	}
+
 	// -->> Fully Parameterized Constructor
 	public Profile_PI(String id, String first_name, String last_name, String address, String address_mailing,
 					  String city, String state, int zipCode, String image, int dateOfBirth, int age, long phone, String email, String password,
-					  Profile_Key pw_key, boolean hasVehicle, boolean hasInsurance, boolean hasWarranty, String acsLvl, boolean isActive) {
+					  Profile_Key pw_key, boolean hasVehicle, boolean hasInsurance, boolean hasWarranty,boolean hasClaims, String acsLvl, boolean isActive) {
 		this.id = id;
 		this.first_name = first_name;
 		this.last_name = last_name;
@@ -72,8 +100,33 @@ public class Profile_PI {
 		this.hasVehicle = hasVehicle;
 		this.hasInsurance = hasInsurance;
 		this.hasWarranty = hasWarranty;
+		this.hasClaims = hasClaims;
 		this.acsLvl = acsLvl;
 		this.isActive = isActive;
+	}
+
+// Constructor for "Error in Creating Profile"
+	public Profile_PI(String id, String error, String i1, boolean b) {
+		this.id = ERROR;
+		this.first_name = ERROR;
+		this.last_name = ERROR;
+		this.address = ERROR;
+		this.address_mailing = ERROR;
+		this.city = ERROR;
+		this.state = ERROR;
+		this.zipCode = 0;
+		this.image = ERROR;
+		this.DateOfBirth = 0;
+		this.age = 0;
+		this.phone = 0;
+		this.email = ERROR;
+		this.password = ERROR;
+		this.hasVehicle = false;
+		this.hasInsurance = false;
+		this.hasWarranty = false;
+		this.hasClaims = false;
+		this.acsLvl = ERROR;
+		this.isActive = false;
 	}
 
 	// Methods
@@ -98,6 +151,7 @@ public class Profile_PI {
 				", hasVehicle=" + hasVehicle +
 				", hasInsurance=" + hasInsurance +
 				", hasWarranty=" + hasWarranty +
+				", hasClaims=" + hasClaims +
 				", acsLvl='" + acsLvl + '\'' +
 				", isActive=" + isActive +
 				'}';
@@ -241,6 +295,10 @@ public class Profile_PI {
 	public void setHasWarranty(boolean hasWarranty) {
 		this.hasWarranty = hasWarranty;
 	}
+
+	public boolean isHasClaims() {	return hasClaims; }
+
+	public void setHasClaims(boolean hasClaims) { this.hasClaims = hasClaims; }
 
 	public String getAcsLvl() {
 		return acsLvl;

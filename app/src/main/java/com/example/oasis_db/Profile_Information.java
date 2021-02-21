@@ -83,9 +83,18 @@ public class Profile_Information extends AppCompatActivity {
 				Profile_PI pi_profile;
 
 				// try / catch block
-				pi_profile = new Profile_PI( "-1","","","","","","",0,
-						"",0,0,"","");
+				try {
+					pi_profile = new Profile_PI("-1", et_profile_first_name.getFirst_name().toString, "", "", "", "", "", 0,
+							"", 0, 0, "", "", true, true, true, true, true);
 
+				}catch(Exception e){
+					// In the case the USER Enters an Incorrect entry Creating a profile
+					Toast.makeText(Profile_Information.this, "Error Creating Profile", Toast.LENGTH_SHORT).show();
+					// In the case of failure, create error transaction in table
+					pi_profile = new Profile_PI(Profile_PI.ERROR, Profile_PI.ERROR, Profile_PI.ERROR, Profile_PI.ERROR, Profile_PI.ERROR, Profile_PI.ERROR, Profile_PI.ERROR, 0,
+							Profile_PI.ERROR, 0, 0, Profile_PI.ERROR, Profile_PI.ERROR, false, false, false, false, false);
+
+				};
 
 
 			}

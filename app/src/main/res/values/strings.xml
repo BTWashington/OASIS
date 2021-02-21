@@ -47,4 +47,5 @@
     <string name="btn_back_button">Back</string>
     <string name="btn_vehicle_info">Vehicle</string>
     <string name="et_dateOfBirth">Date of Birth</string>
+    <string name="et_profile_dateOfBirth">Date of Birth</string>
 </resources>

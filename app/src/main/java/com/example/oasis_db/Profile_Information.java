@@ -16,7 +16,8 @@ public class Profile_Information extends AppCompatActivity {
 	// references to buttons and other controls on the layout
 	ImageView profile_image;
 	EditText et_profile_first_name, et_profile_last_name, et_profile_ID_number, et_garaging_address, et_garaging_address2, et_profile_city, et_profile_state, etn_profile_zipCode;
-	EditText et_profile_phone, et_profile_email, et_Territory, et_profile_password,
+	EditText et_profile_phone, et_profile_email, et_Territory, et_profile_password, et_profile_dateOfBirth;
+	Switch
 
 
 	Button btn_add, btn_viewAll;

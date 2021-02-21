@@ -355,14 +355,14 @@
         app:layout_constraintVertical_bias="0.074" />
 
     <EditText
-        android:id="@+id/et_dateOfBirth"
+        android:id="@+id/et_profile_dateOfBirth"
         android:layout_width="168dp"
         android:layout_height="35dp"
         android:layout_marginStart="8dp"
         android:editable="true"
         android:ems="10"
         android:inputType="date"
-        android:text="@string/et_dateOfBirth"
+        android:text="@string/et_profile_dateOfBirth"
         android:textAlignment="center"
         android:textIsSelectable="true"
         app:layout_constraintBottom_toTopOf="@+id/etn_profile_zipCode"

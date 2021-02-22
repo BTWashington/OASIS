@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Switch;
@@ -19,6 +20,7 @@ public class Profile_Information extends AppCompatActivity {
 	EditText et_profile_phone, et_profile_email, et_Territory, et_profile_password, et_profile_dateOfBirth;
 	Switch sw_has_Vehicle, sw_has_insurance, sw_has_warranty, sw_has_claims;
 	Button btn_back_button,btn_vehicle_info,btn_quote_pool,btn_Home_page, btn_save_profile;
+	CheckBox cb_profile_activeProfile;
 
 
 	Button btn_add, btn_viewAll;
@@ -42,12 +44,17 @@ public class Profile_Information extends AppCompatActivity {
 		et_profile_city = findViewById(R.id.et_profile_city);
 		et_profile_state = findViewById(R.id.et_profile_state);
 		etn_profile_zipCode = findViewById(R.id.etn_profile_zipCode);
+		et_profile_dateOfBirth = findViewById(R.id.et_profile_dateOfBirth);
+		et_profile_phone = findViewById(R.id.et_profile_phone);
+		et_profile_email = findViewById(R.id.et_profile_email);
+		et_profile_password = findViewById(R.id.et_profile_password);
 
 		// Switches for profile information screen - Boolean Values
 		sw_has_Vehicle = findViewById(R.id.sw_has_Vehicle);
 		sw_has_insurance = findViewById(R.id.sw_has_insurance);
 		sw_has_warranty = findViewById(R.id.sw_has_warranty);
 		sw_has_claims = findViewById(R.id.sw_has_claims);
+		cb_profile_activeProfile = findViewById(R.id.cb_profile_activeProfile);
 
 		// Buttons for navigation from profile information screen
 		btn_Home_page = findViewById(R.id.btn_Home_page);
@@ -84,12 +91,15 @@ public class Profile_Information extends AppCompatActivity {
 
 				// try / catch block
 				try {
-					pi_profile = new Profile_PI("-1", et_profile_first_name.getFirst_name().toString, "", "", "", "", "", 0,
-							"", 0, 0, "", "", true, true, true, true, true);
+					pi_profile = new Profile_PI(et_profile_ID_number.getText().toString(), et_profile_first_name.getText().toString(), et_profile_last_name.getText().toString(),
+							et_garaging_address.getText().toString(), et_garaging_address2.getText().toString(),et_profile_state.getText().toString(), et_profile_city.getText().toString(), Integer.parseInt(etn_profile_zipCode.getText().toString()),
+							profile_image.getDrawable().toString(), Integer.parseInt(et_profile_dateOfBirth.getText().toString()), Integer.parseInt(et_profile_dateOfBirth.getText().toString()), et_profile_email.getText().toString(),
+							et_profile_password.getText().toString(), sw_has_Vehicle.isChecked(), sw_has_insurance.isChecked(), sw_has_warranty.isChecked(), sw_has_claims.isChecked(), cb_profile_activeProfile.isChecked());
 
 				}catch(Exception e){
 					// In the case the USER Enters an Incorrect entry Creating a profile
 					Toast.makeText(Profile_Information.this, "Error Creating Profile", Toast.LENGTH_SHORT).show();
+
 					// In the case of failure, create error transaction in table
 					pi_profile = new Profile_PI(Profile_PI.ERROR, Profile_PI.ERROR, Profile_PI.ERROR, Profile_PI.ERROR, Profile_PI.ERROR, Profile_PI.ERROR, Profile_PI.ERROR, 0,
 							Profile_PI.ERROR, 0, 0, Profile_PI.ERROR, Profile_PI.ERROR, false, false, false, false, false);

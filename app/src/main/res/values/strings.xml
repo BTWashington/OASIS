@@ -51,4 +51,5 @@
     <string name="et_profile_ID_number">Profile Number</string>
     <string name="btn_save_profile">Save Profile</string>
     <string name="btn_save_profile1">Save to Profile</string>
+    <string name="cb_profile_activeProfile">Active Profile</string>
 </resources>

@@ -109,18 +109,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.066"
         app:layout_constraintStart_toEndOf="@+id/et_profile_last_name"
-        app:layout_constraintTop_toBottomOf="@+id/et_garaging_address"
+        app:layout_constraintTop_toBottomOf="@+id/et_Profile_UserName"
         app:layout_constraintVertical_bias="0.047" />
 
     <EditText
-        android:id="@+id/et_garaging_address"
+        android:id="@+id/et_Profile_UserName"
         android:layout_width="251dp"
         android:layout_height="34dp"
         android:editable="true"
         android:ems="10"
-        android:hint="@string/et_garaging_address"
-        android:inputType="textPersonName|textPostalAddress"
-        android:text="Name"
+        android:hint="@string/et_Profile_UserName"
+        android:inputType="textNoSuggestions|textPersonName"
+        android:text="@string/et_Profile_UserName"
         android:textAlignment="center"
         android:textIsSelectable="true"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -326,7 +326,7 @@
         app:layout_constraintBottom_toTopOf="@+id/etn_profile_zipCode"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.666"
-        app:layout_constraintStart_toEndOf="@+id/et_garaging_address"
+        app:layout_constraintStart_toEndOf="@+id/et_Profile_UserName"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.166" />
 

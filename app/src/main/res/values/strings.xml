@@ -52,4 +52,7 @@
     <string name="btn_save_profile">Save Profile</string>
     <string name="btn_save_profile1">Save to Profile</string>
     <string name="cb_profile_activeProfile">Active Profile</string>
+    <string name="et_Profile_UserName">"UserName "</string>
+    <string name="tv_New_User_Sign_up">New User Sign Up</string>
+    <string name="et_Reg_UserName">User Name</string>
 </resources>

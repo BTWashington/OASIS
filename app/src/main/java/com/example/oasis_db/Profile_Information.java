@@ -16,7 +16,7 @@ public class Profile_Information extends AppCompatActivity {
 
 	// references to buttons and other controls on the layout
 	ImageView profile_image;
-	EditText et_profile_first_name, et_profile_last_name, et_profile_ID_number, et_garaging_address, et_garaging_address2, et_profile_city, et_profile_state, etn_profile_zipCode;
+	EditText et_profile_first_name, et_profile_last_name, et_profile_ID_number, et_profile_UserName, et_garaging_address2, et_profile_city, et_profile_state, etn_profile_zipCode;
 	EditText et_profile_phone, et_profile_email, et_Territory, et_profile_password, et_profile_dateOfBirth;
 	Switch sw_has_Vehicle, sw_has_insurance, sw_has_warranty, sw_has_claims;
 	Button btn_back_button,btn_vehicle_info,btn_quote_pool,btn_Home_page, btn_save_profile;
@@ -39,7 +39,7 @@ public class Profile_Information extends AppCompatActivity {
 		et_profile_first_name = findViewById(R.id.et_profile_first_name);
 		et_profile_last_name = findViewById(R.id.et_profile_last_name);
 		et_profile_ID_number = findViewById(R.id.et_profile_ID_number);
-		et_garaging_address = findViewById(R.id.et_garaging_address);
+		et_profile_UserName = findViewById(R.id.et_Profile_UserName);
 		et_garaging_address2 = findViewById(R.id.et_garaging_address2);
 		et_profile_city = findViewById(R.id.et_profile_city);
 		et_profile_state = findViewById(R.id.et_profile_state);
@@ -89,12 +89,14 @@ public class Profile_Information extends AppCompatActivity {
 				// Instance of a Profile_PI object
 				Profile_PI pi_profile;
 
-				// try / catch block
+				// try / catch block for PI_Profile Creation
 				try {
 					pi_profile = new Profile_PI(et_profile_ID_number.getText().toString(), et_profile_first_name.getText().toString(), et_profile_last_name.getText().toString(),
-							et_garaging_address.getText().toString(), et_garaging_address2.getText().toString(),et_profile_state.getText().toString(), et_profile_city.getText().toString(), Integer.parseInt(etn_profile_zipCode.getText().toString()),
+							et_profile_UserName.getText().toString(), et_garaging_address2.getText().toString(),et_profile_state.getText().toString(), et_profile_city.getText().toString(), Integer.parseInt(etn_profile_zipCode.getText().toString()),
 							profile_image.getDrawable().toString(), Integer.parseInt(et_profile_dateOfBirth.getText().toString()), Integer.parseInt(et_profile_dateOfBirth.getText().toString()), et_profile_email.getText().toString(),
 							et_profile_password.getText().toString(), sw_has_Vehicle.isChecked(), sw_has_insurance.isChecked(), sw_has_warranty.isChecked(), sw_has_claims.isChecked(), cb_profile_activeProfile.isChecked());
+
+
 
 				}catch(Exception e){
 					// In the case the USER Enters an Incorrect entry Creating a profile
@@ -105,6 +107,23 @@ public class Profile_Information extends AppCompatActivity {
 							Profile_PI.ERROR, 0, 0, Profile_PI.ERROR, Profile_PI.ERROR, false, false, false, false, false);
 
 				};
+
+				// try / catch block for Password Encryption
+				try{
+					//
+					Profile_Key pi_key;
+
+
+				}catch(Exception e){
+					Toast.makeText(Profile_Information.this, "Error Encrypting Password... Password will be Set to last 4 digits of First name, first four digits of Last Name", Toast.LENGTH_SHORT).show();
+
+					// In case of failure, set Profile Password to First four digits of First Name, First four digits of Last Name
+
+
+
+
+				}
+
 
 
 			}

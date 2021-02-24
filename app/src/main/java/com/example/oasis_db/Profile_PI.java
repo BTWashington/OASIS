@@ -9,6 +9,7 @@ public class Profile_PI {
 	private String id;
 	private String first_name;
 	private String last_name;
+	private String UserName;
 	private String address;
 	private String address_mailing;
 	private String city;
@@ -35,11 +36,12 @@ public class Profile_PI {
 
 	// -->> Create Profile Constructor -> PI info only
 
-	public Profile_PI(String id, String first_name, String last_name, String address, String address_mailing, String city, String state, int zipCode,
+	public Profile_PI(String id, String first_name, String last_name,String UserName, String address, String address_mailing, String city, String state, int zipCode,
 					  String image, int dateOfBirth, long phone, String email, String password) {
 		this.id = id;
 		this.first_name = first_name;
 		this.last_name = last_name;
+		this.UserName = UserName;
 		this.address = address;
 		this.address_mailing = address_mailing;
 		this.city = city;
@@ -61,6 +63,7 @@ public class Profile_PI {
 		this.id = id;
 		this.first_name = first_name;
 		this.last_name = last_name;
+		this.UserName = UserName;
 		this.address = address;
 		this.address_mailing = address_mailing;
 		this.city = city;
@@ -85,6 +88,7 @@ public class Profile_PI {
 		this.id = id;
 		this.first_name = first_name;
 		this.last_name = last_name;
+		this.UserName = UserName;
 		this.address = address;
 		this.address_mailing = address_mailing;
 		this.city = city;
@@ -110,6 +114,7 @@ public class Profile_PI {
 		this.id = ERROR;
 		this.first_name = ERROR;
 		this.last_name = ERROR;
+		this.UserName = ERROR;
 		this.address = ERROR;
 		this.address_mailing = ERROR;
 		this.city = ERROR;
@@ -138,6 +143,7 @@ public class Profile_PI {
 				"id=" + id +
 				", first_name='" + first_name + '\'' +
 				", last_name='" + last_name + '\'' +
+				", user_name='" + UserName + '\'' +
 				", address='" + address + '\'' +
 				", address_mailing='" + address_mailing + '\'' +
 				", city='" + city + '\'' +
@@ -156,6 +162,9 @@ public class Profile_PI {
 				", isActive=" + isActive +
 				'}';
 	}
+
+
+	// -->>
 
 
 	// Getters and Setters
@@ -180,139 +189,81 @@ public class Profile_PI {
 		return last_name;
 	}
 
-	public void setLast_name(String last_name) {
-		this.last_name = last_name;
-	}
+	public void setLast_name(String last_name) {this.last_name = last_name;	}
 
-	public String getAddress() {
-		return address;
-	}
+	public String getUserName(){ return UserName; }
 
-	public void setAddress(String address) {
-		this.address = address;
-	}
+	public void setUserName ( String userName){ this.UserName = userName; }
 
-	public String getAddress_mailing() {
-		return address_mailing;
-	}
+	public String getAddress() { return address; }
 
-	public void setAddress_mailing(String address_mailing) {
-		this.address_mailing = address_mailing;
-	}
+	public void setAddress(String address) { this.address = address; }
 
-	public String getCity() {
-		return city;
-	}
+	public String getAddress_mailing() { return address_mailing; }
 
-	public void setCity(String city) {
-		this.city = city;
-	}
+	public void setAddress_mailing(String address_mailing) {this.address_mailing = address_mailing;	}
 
-	public String getState() {
-		return state;
-	}
+	public String getCity() {return city; }
 
-	public void setState(String state) {
-		this.state = state;
-	}
+	public void setCity(String city) {	this.city = city; }
 
-	public int getZipCode() {
-		return zipCode;
-	}
+	public String getState() {	return state; }
 
-	public void setZipCode(int zipCode) {
-		this.zipCode = zipCode;
-	}
+	public void setState(String state) {this.state = state; }
 
-	public String getImage(){return image;}
+	public int getZipCode() { return zipCode; }
 
-	public void setImage(String image){this.image = image;}
+	public void setZipCode(int zipCode) { this.zipCode = zipCode; }
 
-	public int getDateOfBirth() {
-		return DateOfBirth;
-	}
+	public String getImage(){ return image;}
 
-	public void setDateOfBirth(int dateOfBirth) {
-		DateOfBirth = dateOfBirth;
-	}
+	public void setImage(String image){ this.image = image; }
 
-	public int getAge() {
-		return age;
-	}
+	public int getDateOfBirth() { return DateOfBirth; }
 
-	public void setAge(int age) {
-		this.age = age;
-	}
+	public void setDateOfBirth(int dateOfBirth) { DateOfBirth = dateOfBirth; }
 
-	public long getPhone() {
-		return phone;
-	}
+	public int getAge()  {return age;}
 
-	public void setPhone(long phone) {
-		this.phone = phone;
-	}
+	public void setAge(int age) { this.age = age; }
 
-	public String getEmail() {
-		return email;
-	}
+	public long getPhone() { return phone; }
 
-	public void setEmail(String email) {
-		this.email = email;
-	}
+	public void setPhone(long phone) { this.phone = phone; }
 
-	public String getPassword(){
-		return password;
-	}
+	public String getEmail() { return email; }
 
-	public void setPassword(String password){
-		this.password = password;
-	}
+	public void setEmail(String email) { this.email = email; }
+
+	public String getPassword(){ return password; }
+
+	public void setPassword(String password){ this.password = password; }
 
 	public Profile_Key getPw_key() { return pw_key; }
 
 	public void setPw_key(Profile_Key pw_key) {	this.pw_key = pw_key; }
 
-	public boolean isHasVehicle() {
-		return hasVehicle;
-	}
+	public boolean isHasVehicle() { return hasVehicle; }
 
-	public void setHasVehicle(boolean hasVehicle) {
-		this.hasVehicle = hasVehicle;
-	}
+	public void setHasVehicle(boolean hasVehicle) { this.hasVehicle = hasVehicle; }
 
-	public boolean isHasInsurance() {
-		return hasInsurance;
-	}
+	public boolean isHasInsurance() { return hasInsurance; }
 
-	public void setHasInsurance(boolean hasInsurance) {
-		this.hasInsurance = hasInsurance;
-	}
+	public void setHasInsurance(boolean hasInsurance) { this.hasInsurance = hasInsurance; }
 
-	public boolean isHasWarranty() {
-		return hasWarranty;
-	}
+	public boolean isHasWarranty() { return hasWarranty; }
 
-	public void setHasWarranty(boolean hasWarranty) {
-		this.hasWarranty = hasWarranty;
-	}
+	public void setHasWarranty(boolean hasWarranty) { this.hasWarranty = hasWarranty; }
 
 	public boolean isHasClaims() {	return hasClaims; }
 
 	public void setHasClaims(boolean hasClaims) { this.hasClaims = hasClaims; }
 
-	public String getAcsLvl() {
-		return acsLvl;
-	}
+	public String getAcsLvl() { return acsLvl; }
 
-	public void setAcsLvl(String acsLvl) {
-		this.acsLvl = acsLvl;
-	}
+	public void setAcsLvl(String acsLvl) { this.acsLvl = acsLvl; }
 
-	public boolean isActive() {
-		return isActive;
-	}
+	public boolean isActive() { return isActive; }
 
-	public void setActive(boolean active) {
-		isActive = active;
-	}
+	public void setActive(boolean active) { isActive = active; }
 }

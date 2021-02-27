@@ -73,6 +73,30 @@ public class Profile_Information extends AppCompatActivity {
 		sw_activeProfile = findViewById(R.id.sw_activeProfile);
 		rv_profileList = findViewById(R.id.rv_profileList);
 
+
+		/**
+		 * Navigation Buttons
+		 *  -> Home
+		 *  -> Back
+		 *  -> Vehicle Information
+		 *  -> Quote Pool
+		 *
+		 * */
+
+		/**
+		 * Vehicle Information
+		 * -> Navigation Button
+		 *   -> A way to navigate to vehicle information page
+		 *
+		 * */
+		btn_vehicle_info.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				startActivity(new Intent(Profile_Information.this, Vehicle_Model.class));
+			}
+		});
+
+
 		/**
 		 * Home Page Button
 		 * -> Navigation Button
@@ -90,9 +114,10 @@ public class Profile_Information extends AppCompatActivity {
 
 		/**
 		 * Back Button
-		 *
+		 * -> Returns user to the previous screen
 		 *
 		 * */
+
 		btn_back_button.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -112,6 +137,7 @@ public class Profile_Information extends AppCompatActivity {
 			public void onClick(View v) {
 				// Instance of a Profile_PI object
 				Profile_PI pi_profile;
+				Profile_Key pi_key = new Profile_Key(null,null);
 
 				// try / catch block for PI_Profile Creation
 				try {
@@ -147,17 +173,16 @@ public class Profile_Information extends AppCompatActivity {
 
 				// try / catch block for Password Encryption
 				try{
-					//
-					Profile_Key pi_key;
+					//Encrypting User defined password
 
+
+					pi_key = new Profile_Key(et_profile_password.getText().toString(), Profile_Key.Create_int_Password_Key(Integer.parseInt(et_profile_password.getText().toString())));
 
 				}catch(Exception e){
 					Toast.makeText(Profile_Information.this, "Error Encrypting Password... Password will be Set to last 4 digits of First name, first four digits of Last Name", Toast.LENGTH_SHORT).show();
 
 					// In case of failure, set Profile Password to First four digits of First Name, First four digits of Last Name
-
-
-
+				    pi_key = new Profile_Key(Profile_PI.ERROR,0);
 
 				}
 

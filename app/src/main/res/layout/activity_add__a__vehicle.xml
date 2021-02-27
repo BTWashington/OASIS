@@ -7,126 +7,101 @@
     tools:context=".Add_A_Vehicle">
 
     <TextView
+        android:id="@+id/tv_model_of_vehicle2"
+        android:layout_width="145dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:hint="@string/tv_model_of_vehicle"
+        android:text="@string/tv_model_of_vehicle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tv_model_of_vehicle"
+        app:layout_constraintTop_toBottomOf="@+id/tv_MakeOfVehicle" />
+
+    <TextView
         android:id="@+id/tv_NameOfDealership"
         android:layout_width="207dp"
         android:layout_height="39dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:hint="@string/tv_name_of_dealership"
         android:text="@string/tv_name_of_dealership"
 
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteX="124dp"
+        tools:layout_editor_absoluteY="648dp" />
 
     <TextView
         android:id="@+id/tv_year_of_vehicle"
         android:layout_width="116dp"
         android:layout_height="32dp"
-        android:layout_marginStart="8dp"
 
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:hint="@string/tv_year_of_vehicle"
         android:text="@string/tv_year_of_vehicle"
-        app:layout_constraintBaseline_toBaselineOf="@+id/tv_MakeOfVehicle"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_MakeOfVehicle"
         android:layout_width="147dp"
         android:layout_height="33dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:hint="@string/tv_USER_profileNumber"
         android:text="@string/tv_make_of_vehicle"
-        app:layout_constraintBaseline_toBaselineOf="@+id/tv_model_of_vehicle"
-        tools:layout_editor_absoluteX="133dp" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
-        android:layout_width="0dp"
-        android:layout_height="246dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/cb_has_claims"
-        app:layout_constraintTop_toBottomOf="@+id/cb_has_claims"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintStart_toEndOf="@+id/tv_year_of_vehicle"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_model_of_vehicle"
-        android:layout_width="146dp"
-        android:layout_height="33dp"
+        android:layout_width="145dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:hint="@string/tv_model_of_vehicle"
         android:text="@string/tv_model_of_vehicle"
-        app:layout_constraintBaseline_toBaselineOf="@+id/tv_vin_number"
-        tools:layout_editor_absoluteX="288dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_year_of_vehicle" />
 
     <TextView
         android:id="@+id/tv_vin_number"
-        android:layout_width="273dp"
-        android:layout_height="33dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_width="368dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:hint="@string/tv_vin_number"
         android:text="@string/tv_vin_number"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tv_model_of_vehicle"
-        app:layout_constraintTop_toBottomOf="@+id/tv_NameOfDealership" />
-
-    <TextView
-        android:id="@+id/tv_odometer"
-        android:layout_width="136dp"
-        android:layout_height="34dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="@string/tv_odometer1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_vin_number"
-        app:layout_constraintBottom_toTopOf="@id/recyclerView"
-        />
+        app:layout_constraintHorizontal_bias="0.372"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_model_of_vehicle"
+        app:layout_constraintVertical_bias="0.0" />
 
     <CheckBox
         android:id="@+id/cb_has_insurance"
         android:layout_width="110dp"
         android:layout_height="24dp"
-        android:layout_marginStart="8dp"
         android:hint="@string/cb_has_insurance"
         android:text="@string/cb_has_insurance"
-        app:layout_constraintBaseline_toBaselineOf="@+id/cb_has_roadside_assist"
-        app:layout_constraintStart_toStartOf="parent" />
+        tools:layout_editor_absoluteX="241dp"
+        tools:layout_editor_absoluteY="277dp" />
 
     <CheckBox
         android:id="@+id/cb_has_Warranty"
         android:layout_width="110dp"
         android:layout_height="25dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginBottom="8dp"
         android:text="@string/cb_has_Warranty"
-        app:layout_constraintBottom_toTopOf="@+id/recyclerView"
-        app:layout_constraintStart_toStartOf="parent" />
+        tools:layout_editor_absoluteX="212dp"
+        tools:layout_editor_absoluteY="532dp" />
 
     <CheckBox
         android:id="@+id/cb_has_roadside_assist"
         android:layout_width="137dp"
         android:layout_height="25dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:text="@string/cb_has_roadside_assist"
-        app:layout_constraintStart_toEndOf="@+id/cb_has_insurance"
-        app:layout_constraintTop_toBottomOf="@+id/tv_year_of_vehicle" />
-
-    <CheckBox
-        android:id="@+id/cb_has_claims"
-        android:layout_width="137dp"
-        android:layout_height="24dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:hint="@string/cb_has_claims"
-        android:text="@string/cb_has_claims"
-        app:layout_constraintStart_toEndOf="@+id/cb_has_Warranty"
-        app:layout_constraintTop_toBottomOf="@+id/cb_has_insurance"
-        app:layout_constraintBottom_toTopOf="@id/recyclerView"
-        />
+        tools:layout_editor_absoluteX="198dp"
+        tools:layout_editor_absoluteY="451dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

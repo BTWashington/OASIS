@@ -3,6 +3,7 @@ package com.example.oasis_db;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -73,15 +74,38 @@ public class Profile_Information extends AppCompatActivity {
 		rv_profileList = findViewById(R.id.rv_profileList);
 
 		/**
+		 * Home Page Button
+		 * -> Navigation Button
+		 *   -> A way to always find the home page from any layer of the app		 *
 		 *
-		 *  ADD BUTTON
-		 *  Purpose: Creates a new Profile -> Checks for Valid Input from USER
-		 *  								-> Throws an Exception if invalid
-		 *  Try / Catch Block to Catch USER incorrect inputs creating New Profiles
-		 *			Creates a new profile
-		 *			Database Assistant writes the profile to the database
+		 * */
+
+		btn_Home_page.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				startActivity(new Intent(Profile_Information.this, Home_Page.class));
+			}
+		});
+
+
+		/**
+		 * Back Button
 		 *
-		 *  */
+		 *
+		 * */
+		btn_back_button.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				// Need to figure out how to send to previous page
+			}
+		});
+
+
+		/**
+		 * Save Profile Button
+		 *
+		 * */
+
 
 		btn_save_profile.setOnClickListener(new View.OnClickListener() {
 			@Override
@@ -91,10 +115,23 @@ public class Profile_Information extends AppCompatActivity {
 
 				// try / catch block for PI_Profile Creation
 				try {
-					pi_profile = new Profile_PI(et_profile_ID_number.getText().toString(), et_profile_first_name.getText().toString(), et_profile_last_name.getText().toString(),
-							et_profile_UserName.getText().toString(), et_garaging_address2.getText().toString(),et_profile_state.getText().toString(), et_profile_city.getText().toString(), Integer.parseInt(etn_profile_zipCode.getText().toString()),
-							profile_image.getDrawable().toString(), Integer.parseInt(et_profile_dateOfBirth.getText().toString()), Integer.parseInt(et_profile_dateOfBirth.getText().toString()), et_profile_email.getText().toString(),
-							et_profile_password.getText().toString(), sw_has_Vehicle.isChecked(), sw_has_insurance.isChecked(), sw_has_warranty.isChecked(), sw_has_claims.isChecked(), cb_profile_activeProfile.isChecked());
+					pi_profile = new Profile_PI(
+							et_profile_ID_number.getText().toString(),
+							et_profile_first_name.getText().toString(),
+							et_profile_last_name.getText().toString(),
+							et_profile_UserName.getText().toString(),
+							et_garaging_address2.getText().toString(),
+							et_profile_state.getText().toString(),
+							et_profile_city.getText().toString(),
+							Integer.parseInt(etn_profile_zipCode.getText().toString()),
+							profile_image.getDrawable().toString(),
+							Integer.parseInt(et_profile_dateOfBirth.getText().toString()),
+							Integer.parseInt(et_profile_phone.getText().toString()),
+							et_profile_email.getText().toString(),
+							et_profile_password.getText().toString(),
+							sw_has_Vehicle.isChecked(), sw_has_insurance.isChecked(),
+							sw_has_warranty.isChecked(), sw_has_claims.isChecked(),
+							cb_profile_activeProfile.isChecked());
 
 
 
@@ -106,7 +143,7 @@ public class Profile_Information extends AppCompatActivity {
 					pi_profile = new Profile_PI(Profile_PI.ERROR, Profile_PI.ERROR, Profile_PI.ERROR, Profile_PI.ERROR, Profile_PI.ERROR, Profile_PI.ERROR, Profile_PI.ERROR, 0,
 							Profile_PI.ERROR, 0, 0, Profile_PI.ERROR, Profile_PI.ERROR, false, false, false, false, false);
 
-				};
+				}
 
 				// try / catch block for Password Encryption
 				try{
@@ -129,6 +166,21 @@ public class Profile_Information extends AppCompatActivity {
 			}
 		});
 
+
+
+
+		//___________________________________________________________________________________________
+
+		/**
+		 *
+		 *  ADD BUTTON
+		 *  Purpose: Creates a new Profile -> Checks for Valid Input from USER
+		 *  								-> Throws an Exception if invalid
+		 *  Try / Catch Block to Catch USER incorrect inputs creating New Profiles
+		 *			Creates a new profile
+		 *			Database Assistant writes the profile to the database
+		 *
+		 *  */
 		btn_add.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -171,5 +223,28 @@ public class Profile_Information extends AppCompatActivity {
 				Toast.makeText(Profile_Information.this, "View All Profiles", Toast.LENGTH_SHORT).show();
 			}
 		});
-	};
+
+
+	}
+
+
+	private void setup_profile_from_registration() {
+		et_profile_first_name = (EditText)findViewById(R.id.et_reg_first_name);
+		et_profile_last_name = (EditText)findViewById(R.id.et_reg_last_name);
+		et_profile_UserName = (EditText)findViewById(R.id.et_reg_user_name);
+		et_garaging_address2 = (EditText)findViewById(R.id.et_reg_street_address);
+		et_profile_city = (EditText)findViewById(R.id.et_reg_city);
+		et_profile_state = (EditText)findViewById(R.id.et_reg_state);
+		etn_profile_zipCode = (EditText)findViewById(R.id.et_reg_zip_code);
+		et_profile_password = (EditText)findViewById(R.id.et_reg_password);
+		et_profile_email = (EditText)findViewById(R.id.et_reg_email);
+		et_profile_phone = (EditText)findViewById(R.id.et_reg_phone);
+		et_profile_dateOfBirth = (EditText)findViewById(R.id.et_profile_dateOfBirth);
+		et_profile_password = ()
+
+
+
+	}
+
+
 }

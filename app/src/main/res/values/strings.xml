@@ -55,4 +55,24 @@
     <string name="et_Profile_UserName">"UserName "</string>
     <string name="tv_New_User_Sign_up">New User Sign Up</string>
     <string name="et_Reg_UserName">User Name</string>
+    <string name="et_Reg_email">Email</string>
+    <string name="et_Reg_Phone">Phone</string>
+    <string name="et_Reg_Password">Password</string>
+    <string name="et_Reg_zipCode">Zip Code</string>
+    <string name="et_Reg_Territory">Territory</string>
+    <string name="sw_Reg_Has_Vehicle">Do you have a vehicle?</string>
+    <string name="sw_Reg_Has_INS">Do you have Insurance?</string>
+    <string name="sw_Reg_HasWarranty">Is your vehicle protected with a Warranty?</string>
+    <string name="sw_Reg_HasWarranty1">Does your Vehicle have a Warranty?</string>
+    <string name="sw_Reg_AnyClaims">Any Claims</string>
+    <string name="sw_Reg_AnyClaims1">Are there any Claims?</string>
+    <string name="btn_reg_registration">Register</string>
+    <string name="btn_reg_registration">Register</string>
+    <string name="tv_already_signedin">Already Signed In?</string>
+    <string name="tv_already_have_profile">Already Have Profile?</string>
+    <string name="tv_already_have_a_profile">Already have a profile? Back to Login</string>
+    <string name="et_reg_user_name">UserName</string>
+    <string name="et_reg_password">Password</string>
+    <string name="sw_reg_has_ins">Does the vehicle have Insurance?</string>
+    <string name="sw_reg_veh_has_ins">Does your vehicle have Insurance?</string>
 </resources>

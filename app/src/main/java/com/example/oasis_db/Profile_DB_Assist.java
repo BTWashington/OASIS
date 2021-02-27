@@ -8,9 +8,26 @@ import androidx.annotation.Nullable;
 
 public class Profile_DB_Assist extends SQLiteOpenHelper {
 
+	public static final String PROFILE_PI_TABLE = "Profile_PI";
+	public static final String COL_PROFILE_FIRST_NAME = "COL_PROFILE_FIRST_NAME";
+	public static final String COL_PROFILE_LAST_NAME = "COL_PROFILE_LAST_NAME";
+	public static final String COL_PROFILE_USERNAME = "COL_PROFILE_USERNAME TEXT";
+	public static final String COL_PROFILE_GARAGING_ADDRESS = "COL_PROFILE_GARAGING_ADDRESS";
+	public static final String COL_PROFILE_CITY_TEXT = "COL_PROFILE_CITY TEXT";
+	public static final String COL_PROFILE_STATE = "COL_PROFILE_STATE";
+	public static final String COL_PROFILE_ZIPCODE = "COL_PROFILE_ZIPCODE";
+	public static final String COL_PROFILE_EMAIL = "COL_PROFILE_EMAIL TEXT";
+	public static final String COL_PROFILE_PHONE = "COL_PROFILE_PHONE INT";
+	public static final String COL_PROFILE_PASSWORD = "COL_PROFILE_PASSWORD TEXT";
+	public static final String COL_PROFILE_DATEOFBIRTH = "COL_PROFILE_DATEOFBIRTH";
+	public static final String COL_PROFILE_HAS_A_VEHICLE = "COL_PROFILE_HAS_A_VEHICLE";
+	public static final String COL_PROFILE_HAS_INSURANCE = "COL_PROFILE_HAS_INSURANCE";
+	public static final String COL_PROFILE_HAS_WARRANTY = "COL_PROFILE_HAS_WARRANTY";
+	public static final String COL_PROFILE_HAS_CLAIMS = "COL_PROFILE_HAS_CLAIMS";
+
 	// Constructor
 	public Profile_DB_Assist(@Nullable Context context){
-		super(context,"")
+		super(context,"OASIS_profiles",null,1);
 	}
 
 
@@ -23,7 +40,27 @@ public class Profile_DB_Assist extends SQLiteOpenHelper {
 	 */
 	@Override
 	public void onCreate(SQLiteDatabase db) {
+		String createProfileTableStatement = "CREATE TABLE " +
+				PROFILE_PI_TABLE + " (ID INTEGER PRIMARY KEY AUTOINCREMENT," +
+				" " + COL_PROFILE_FIRST_NAME + " TEXT," +
+				" " + COL_PROFILE_LAST_NAME + " TEXT," +
+				" " + COL_PROFILE_USERNAME + "TEXT," +
+				" " + COL_PROFILE_GARAGING_ADDRESS + " TEXT," +
+				" " + COL_PROFILE_CITY_TEXT + "," +
+				" " + COL_PROFILE_STATE + " TEXT," +
+				" " + COL_PROFILE_ZIPCODE + " INT," +
+				" " + COL_PROFILE_EMAIL + "TEXT," +
+				" " + COL_PROFILE_PHONE + "INT," +
+				" " + COL_PROFILE_PASSWORD + "TEXT," +
+				" " + COL_PROFILE_DATEOFBIRTH + "INT," +
+				" " + COL_PROFILE_HAS_A_VEHICLE + "BOOLEAN," +
+				" " + COL_PROFILE_HAS_INSURANCE + "BOOLEAN," +
+				" " + COL_PROFILE_HAS_WARRANTY + "BOOLEAN," +
+				" " + COL_PROFILE_HAS_CLAIMS + "BOOLEAN,)"
+		;
 
+
+		db.execSQL(createProfileTableStatement);
 	}
 
 	/**

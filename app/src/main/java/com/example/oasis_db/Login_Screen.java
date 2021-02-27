@@ -22,7 +22,7 @@ public class Login_Screen extends AppCompatActivity {
 	// The user will only be able to enter the app if they enter the
 	// correct credentials
 
-	private String UserName = "";
+	private String UserName = ;
 	private String Password = "";
 
 	boolean isValid = false;
